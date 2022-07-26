@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 32
+    namespace "com.ioki.progressbutton.sample"
+
+    defaultConfig {
+        applicationId "com.ioki.progressbutton.sample"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.2.0"
+    }
+}
+
+dependencies {
+    implementation(project(":progressbutton"))
+
+    implementation("com.google.android.material:material:1.6.1")
+    implementation("androidx.activity:activity-compose:1.5.0")
+
+    implementation("androidx.compose.ui:ui:1.3.0-alpha01")
+    implementation("androidx.compose.foundation:foundation:1.3.0-alpha01")
+    implementation("androidx.compose.material:material:1.3.0-alpha01")
+}
