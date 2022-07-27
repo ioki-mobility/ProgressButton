@@ -28,6 +28,7 @@ fun ProgressButton(
     enabled: Boolean = true,
     startDelay: Duration = Duration.ZERO,
     duration: Duration = 10L.seconds,
+    restDuration: Duration = duration,
     onClick: () -> Unit = {},
     onFinished: () -> Unit = {},
     content: @Composable () -> Unit
@@ -58,12 +59,18 @@ fun ProgressButton(
         Box(
             modifier = Modifier.fillMaxSize(),
         ) {
-            var progress by remember { mutableStateOf(1f) }
+            var progress by remember {
+                val startProgress = calculateStartProgressInPercent(
+                    duration = duration,
+                    restDuration = restDuration
+                )
+                mutableStateOf(startProgress)
+            }
             val animatedProgress: Float by animateFloatAsState(
                 targetValue = progress,
                 animationSpec = tween(
-                    durationMillis = duration.inWholeMilliseconds.toInt(),
-                    delayMillis = startDelay.inWholeMilliseconds.toInt(),
+                    durationMillis = restDuration.inWholeMilliseconds.toInt(),
+                    delayMillis = startDelay.inWholeMilliseconds.toInt() ,
                     easing = LinearEasing,
                 ),
                 finishedListener = {
@@ -86,3 +93,9 @@ fun ProgressButton(
         }
     }
 }
+
+private fun calculateStartProgressInPercent(
+    duration: Duration,
+    restDuration: Duration
+): Float =
+    (100 * restDuration.inWholeMilliseconds.toFloat() / duration.inWholeMilliseconds.toFloat()) / 100

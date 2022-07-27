@@ -35,6 +35,7 @@ class SampleActivity : ComponentActivity() {
                     DifferedSizeProgressButton(logFlow)
                     RoundProgressButton(logFlow)
                     DifferentColorProgressButton(logFlow)
+                    RestDurationProgressButton(logFlow)
                 }
                 Divider()
                 val scrollState = rememberScrollState()
@@ -53,6 +54,7 @@ class SampleActivity : ComponentActivity() {
 private fun NormalProgressButton(logFlow: MutableStateFlow<String>) {
     val methodName = object {}.javaClass.enclosingMethod?.name ?: ""
 
+    val currentTime = remember { System.currentTimeMillis() / 1000 }
     ProgressButton(
         modifier = Modifier,
         startDelay = 1.seconds,
@@ -61,7 +63,8 @@ private fun NormalProgressButton(logFlow: MutableStateFlow<String>) {
             logFlow.update { "$it \n$methodName Clicked" }
         },
         onFinished = {
-            logFlow.update { "$it \n$methodName Finished" }
+            val secondsUntilFinished = (System.currentTimeMillis() / 1000) - currentTime
+            logFlow.update { "$it \n$methodName Finished in $secondsUntilFinished sec" }
         }
     ) {
         Box(
@@ -79,6 +82,7 @@ private fun NormalProgressButton(logFlow: MutableStateFlow<String>) {
 private fun DisabledProgressButton(logFlow: MutableStateFlow<String>) {
     val methodName = object {}.javaClass.enclosingMethod?.name ?: ""
 
+    val currentTime = remember { System.currentTimeMillis() / 1000 }
     ProgressButton(
         modifier = Modifier,
         startDelay = 2.seconds,
@@ -89,7 +93,8 @@ private fun DisabledProgressButton(logFlow: MutableStateFlow<String>) {
             logFlow.update { "$it \n$methodName Clicked" }
         },
         onFinished = {
-            logFlow.update { "$it \n$methodName Finished" }
+            val secondsUntilFinished = (System.currentTimeMillis() / 1000) - currentTime
+            logFlow.update { "$it \n$methodName Finished in $secondsUntilFinished sec" }
         }
     ) {
         Box(
@@ -107,6 +112,7 @@ private fun DisabledProgressButton(logFlow: MutableStateFlow<String>) {
 private fun DisabledAfterFinishedProgressButton(logFlow: MutableStateFlow<String>) {
     val methodName = object {}.javaClass.enclosingMethod?.name ?: ""
 
+    val currentTime = remember { System.currentTimeMillis() / 1000 }
     var enabled by remember { mutableStateOf(true) }
     ProgressButton(
         modifier = Modifier,
@@ -118,7 +124,8 @@ private fun DisabledAfterFinishedProgressButton(logFlow: MutableStateFlow<String
         },
         onFinished = {
             enabled = false
-            logFlow.update { "$it \n$methodName Finished" }
+            val secondsUntilFinished = (System.currentTimeMillis() / 1000) - currentTime
+            logFlow.update { "$it \n$methodName Finished in $secondsUntilFinished sec" }
         }
     ) {
         Box(
@@ -136,6 +143,7 @@ private fun DisabledAfterFinishedProgressButton(logFlow: MutableStateFlow<String
 private fun DifferedSizeProgressButton(logFlow: MutableStateFlow<String>) {
     val methodName = object {}.javaClass.enclosingMethod?.name ?: ""
 
+    val currentTime = remember { System.currentTimeMillis() / 1000 }
     ProgressButton(
         modifier = Modifier.size(height = 80.dp, width = 450.dp),
         startDelay = 4.seconds,
@@ -144,7 +152,8 @@ private fun DifferedSizeProgressButton(logFlow: MutableStateFlow<String>) {
             logFlow.update { "$it \n$methodName Clicked" }
         },
         onFinished = {
-            logFlow.update { "$it \n$methodName Finished" }
+            val secondsUntilFinished = (System.currentTimeMillis() / 1000) - currentTime
+            logFlow.update { "$it \n$methodName Finished in $secondsUntilFinished sec" }
         }
     ) {
         Box(
@@ -162,6 +171,7 @@ private fun DifferedSizeProgressButton(logFlow: MutableStateFlow<String>) {
 private fun RoundProgressButton(logFlow: MutableStateFlow<String>) {
     val methodName = object {}.javaClass.enclosingMethod?.name ?: ""
 
+    val currentTime = remember { System.currentTimeMillis() / 1000 }
     ProgressButton(
         modifier = Modifier.size(height = 240.dp, width = 239.dp),
         duration = 16.seconds,
@@ -169,7 +179,8 @@ private fun RoundProgressButton(logFlow: MutableStateFlow<String>) {
             logFlow.update { "$it \n$methodName Clicked" }
         },
         onFinished = {
-            logFlow.update { "$it \n$methodName Finished" }
+            val secondsUntilFinished = (System.currentTimeMillis() / 1000) - currentTime
+            logFlow.update { "$it \n$methodName Finished in $secondsUntilFinished" }
         }
     ) {
         Box(
@@ -187,6 +198,7 @@ private fun RoundProgressButton(logFlow: MutableStateFlow<String>) {
 private fun DifferentColorProgressButton(logFlow: MutableStateFlow<String>) {
     val methodName = object {}.javaClass.enclosingMethod?.name ?: ""
 
+    val currentTime = remember { System.currentTimeMillis() / 1000 }
     ProgressButton(
         modifier = Modifier,
         duration = 10.seconds,
@@ -196,7 +208,36 @@ private fun DifferentColorProgressButton(logFlow: MutableStateFlow<String>) {
             logFlow.update { "$it \n$methodName Clicked" }
         },
         onFinished = {
-            logFlow.update { "$it \n$methodName Finished" }
+            val secondsUntilFinished = (System.currentTimeMillis() / 1000) - currentTime
+            logFlow.update { "$it \n$methodName Finished in $secondsUntilFinished" }
+        }
+    ) {
+        Box(
+            modifier = Modifier
+                .padding(start = 26.dp, end = 26.dp)
+                .fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(methodName)
+        }
+    }
+}
+
+@Composable
+private fun RestDurationProgressButton(logFlow: MutableStateFlow<String>) {
+    val methodName = object {}.javaClass.enclosingMethod?.name ?: ""
+
+    val currentTime = remember { System.currentTimeMillis() / 1000 }
+    ProgressButton(
+        modifier = Modifier,
+        duration = 10.seconds,
+        restDuration = 5.seconds,
+        onClick = {
+            logFlow.update { "$it \n$methodName Clicked" }
+        },
+        onFinished = {
+            val secondsUntilFinished = (System.currentTimeMillis() / 1000) - currentTime
+            logFlow.update { "$it \n$methodName Finished in $secondsUntilFinished sec" }
         }
     ) {
         Box(
