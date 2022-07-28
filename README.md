@@ -53,6 +53,7 @@ fun ProgressButton(
     enabled: Boolean = true,
     startDelay: Duration = Duration.ZERO,
     duration: Duration = 10L.seconds,
+    restDuration: Duration = duration,
     onClick: () -> Unit = {},
     onFinished: () -> Unit = {},
     content: @Composable () -> Unit
@@ -69,6 +70,7 @@ fun ProgressButton(
 | enabled  | Enables or disable the button |
 | startDelay  | An delay before the progress actually starts |
 | duration  | The duration of the progress |
+| restDuration | The duration which is left of `duration` to reach zero | 
 | onClick  | Will be called when the button got clicked and `enabled` is `true` |
 | onFinished  | Will be called when the `duration` reaches zero |
 | content  | The content of the button |
