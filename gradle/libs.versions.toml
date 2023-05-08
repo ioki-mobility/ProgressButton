@@ -1,0 +1,13 @@
+[libraries]
+compose-ui = "androidx.compose.ui:ui:1.3.0-alpha01"
+compose-foundation = "androidx.compose.foundation:foundation:1.3.0-alpha01"
+compose-material = "androidx.compose.material:material:1.3.0-alpha01"
+tools-compose-compiler = "androidx.compose.compiler:compiler:1.2.0"
+
+sample-material = "com.google.android.material:material:1.6.1"
+sample-composeActivity = "androidx.activity:activity-compose:1.5.0"
+
+[plugins]
+androidApplication = "com.android.application:7.2.1"
+androidLibrary = "com.android.library:7.2.1"
+kotlin = "org.jetbrains.kotlin.android:1.7.0"
