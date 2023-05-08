@@ -4,6 +4,13 @@ plugins {
     alias(libs.plugins.kotlin) apply false
 }
 
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
