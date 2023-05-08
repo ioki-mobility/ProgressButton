@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kotlin)
     `maven-publish`
 }
 
@@ -17,7 +17,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.2.0"
+        kotlinCompilerExtensionVersion = libs.tools.compose.compiler.get().version
     }
 
     publishing {
@@ -42,7 +42,7 @@ publishing {
 }
 
 dependencies {
-    api("androidx.compose.ui:ui:1.3.0-alpha01")
-    implementation("androidx.compose.foundation:foundation:1.3.0-alpha01")
-    implementation("androidx.compose.material:material:1.3.0-alpha01")
+    api(libs.compose.ui)
+    implementation(libs.compose.foundation)
+    implementation(libs.compose.material)
 }
