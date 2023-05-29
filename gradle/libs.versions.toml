@@ -5,7 +5,7 @@ compose-material = "androidx.compose.material:material:1.4.3"
 tools-compose-compiler = "androidx.compose.compiler:compiler:1.4.7"
 
 sample-material = "com.google.android.material:material:1.9.0"
-sample-composeActivity = "androidx.activity:activity-compose:1.7.1"
+sample-composeActivity = "androidx.activity:activity-compose:1.7.2"
 
 [plugins]
 androidApplication = "com.android.application:8.0.1"
