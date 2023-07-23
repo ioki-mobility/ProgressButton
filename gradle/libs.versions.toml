@@ -2,7 +2,7 @@
 compose-ui = "androidx.compose.ui:ui:1.4.3"
 compose-foundation = "androidx.compose.foundation:foundation:1.4.3"
 compose-material = "androidx.compose.material:material:1.4.3"
-tools-compose-compiler = "androidx.compose.compiler:compiler:1.4.8"
+tools-compose-compiler = "androidx.compose.compiler:compiler:1.5.0"
 
 sample-material = "com.google.android.material:material:1.9.0"
 sample-composeActivity = "androidx.activity:activity-compose:1.7.2"
@@ -10,4 +10,4 @@ sample-composeActivity = "androidx.activity:activity-compose:1.7.2"
 [plugins]
 androidApplication = "com.android.application:8.0.2"
 androidLibrary = "com.android.library:8.0.2"
-kotlin = "org.jetbrains.kotlin.android:1.8.22"
+kotlin = "org.jetbrains.kotlin.android:1.9.0"
