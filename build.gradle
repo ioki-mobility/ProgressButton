@@ -2,8 +2,14 @@ plugins {
     alias(libs.plugins.androidApplication) apply false
     alias(libs.plugins.androidLibrary) apply false
     alias(libs.plugins.kotlin) apply false
+    alias(libs.plugins.wrapperUpgrade)
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+wrapperUpgrade {
+    gradle {
+        create("progressButton") {
+            repo.set("ioki-mobility/ProgressButton")
+            baseBranch.set("main")
+        }
+    }
 }
