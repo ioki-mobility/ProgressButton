@@ -1,3 +1,6 @@
+[versions]
+androidGradlePlugin = "8.1.0"
+
 [libraries]
 compose-ui = "androidx.compose.ui:ui:1.4.3"
 compose-foundation = "androidx.compose.foundation:foundation:1.4.3"
@@ -8,7 +11,7 @@ sample-material = "com.google.android.material:material:1.9.0"
 sample-composeActivity = "androidx.activity:activity-compose:1.7.2"
 
 [plugins]
-androidApplication = "com.android.application:8.0.2"
-androidLibrary = "com.android.library:8.0.2"
+androidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+androidLibrary = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin = "org.jetbrains.kotlin.android:1.9.0"
 wrapperUpgrade = "org.gradle.wrapper-upgrade:0.11.2"
