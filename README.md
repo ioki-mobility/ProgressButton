@@ -1,5 +1,6 @@
 # ProgressButton
 
+[![Build](https://github.com/ioki-mobility/ProgressButton/actions/workflows/build.yml/badge.svg)](https://github.com/ioki-mobility/ProgressButton/actions/workflows/build.yml)
 [![Jitpack](https://jitpack.io/v/ioki-mobility/ProgressButton.svg)](https://jitpack.io/#ioki-mobility/ProgressButton)
 [![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ioki-mobility/ProgressButton/blob/main/LICENSE)
 
