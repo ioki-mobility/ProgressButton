@@ -3,16 +3,20 @@ plugins {
     alias(libs.plugins.kotlin)
 }
 
+kotlin {
+    jvmToolchain(17)
+}
+
 android {
-    compileSdk 33
-    namespace "com.ioki.progressbutton.sample"
+    compileSdk = 33
+    namespace = "com.ioki.progressbutton.sample"
 
     defaultConfig {
-        applicationId "com.ioki.progressbutton.sample"
-        minSdk 21
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        applicationId = "com.ioki.progressbutton.sample"
+        minSdk = 21
+        targetSdk = 33
+        versionCode = 1
+        versionName = "1.0"
     }
 
     buildFeatures {
@@ -21,11 +25,6 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = libs.tools.compose.compiler.get().version
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions { jvmTarget = "1.8" }
 }
 
 dependencies {
