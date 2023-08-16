@@ -4,6 +4,10 @@ plugins {
     `maven-publish`
 }
 
+kotlin {
+    jvmToolchain(17)
+}
+
 android {
     compileSdk = 33
     namespace = "com.ioki.progressbutton"
