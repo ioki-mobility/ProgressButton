@@ -7,7 +7,8 @@
 ## What?
 
 We needed an Button that uses a progress state as background.
-As we didn't found something like that in Jetpack Compose we decided to build it on our own and open source it.
+As we didn't found something like that in Jetpack Compose 
+we decided to build it on our own and open source it.
 
 <p align="center">
     <img src="art/demo.gif" width=180 />
@@ -15,7 +16,8 @@ As we didn't found something like that in Jetpack Compose we decided to build it
 
 ## How?
 
-The following creates a `ProgressButton` which starts the progress after 1 seconds while the progress will take 10 seconds.
+The following creates a `ProgressButton` which starts the progress after 1 seconds while the
+progress will take 10 seconds.
 
 ```kotlin
 ProgressButton(
@@ -40,7 +42,9 @@ ProgressButton(
 }
 ```
 
-You can also checkout the [`SampleActivity`](sample/src/main/java/com/ioki/progressbutton/sample/SampleActivity.kt) for more code snippets.
+You can also checkout
+the [`SampleActivity`](sample/src/main/java/com/ioki/progressbutton/sample/SampleActivity.kt) 
+for more code snippets.
 
 ## Docs
 
@@ -58,27 +62,27 @@ fun ProgressButton(
     onClick: () -> Unit = {},
     onFinished: () -> Unit = {},
     content: @Composable () -> Unit
-) : Unit
+)
 ```
 
-| Parameter | Description | 
-|---|---|
-| Modifier | Modifier to be applied to the button |
-| backgroundColor  | The color *behind* the progress |
-| progressColor  | The progress color which which will animate away after `duration` reaches zero |
-| contentColor  | Color of the content of the button |
-| contentColorDisabled  | Color of the content of the button when its disabled |
-| enabled  | Enables or disable the button |
-| startDelay  | An delay before the progress actually starts |
-| duration  | The duration of the progress |
-| restDuration | The duration which is left of `duration` to reach zero | 
-| onClick  | Will be called when the button got clicked and `enabled` is `true` |
-| onFinished  | Will be called when the `duration` reaches zero |
-| content  | The content of the button |
+| Parameter            | Description                                                                    | 
+|----------------------|--------------------------------------------------------------------------------|
+| Modifier             | Modifier to be applied to the button                                           |
+| backgroundColor      | The color *behind* the progress                                                |
+| progressColor        | The progress color which which will animate away after `duration` reaches zero |
+| contentColor         | Color of the content of the button                                             |
+| contentColorDisabled | Color of the content of the button when its disabled                           |
+| enabled              | Enables or disable the button                                                  |
+| startDelay           | An delay before the progress actually starts                                   |
+| duration             | The duration of the progress                                                   |
+| restDuration         | The duration which is left of `duration` to reach zero                         | 
+| onClick              | Will be called when the button got clicked and `enabled` is `true`             |
+| onFinished           | Will be called when the `duration` reaches zero                                |
+| content              | The content of the button                                                      |
 
 ## Download
 
-ProgressButton is hosted on JitPack. 
+ProgressButton is hosted on JitPack.
 Here's how you include it in your gradle project:
 
 **Step 1.** Add the JitPack repository to your build file:
@@ -87,10 +91,10 @@ Here's how you include it in your gradle project:
 allprojects {
     repositories {
         // Other repositories
-        maven { 
+        maven {
             url 'https://jitpack.io'
+            // For a of bit extra safety
             content {
-                // A bit extra safety
                 includeGroup("com.github.ioki-mobility")
             }
         }
@@ -106,8 +110,15 @@ dependencies {
 }
 ```
 
-<!-- 
 ## Releasing
-// TODO
-Probably just create a github release
--->
+
+1. Checkout `main` branch and pull latest changes.
+2. Add the changes to the top of the [`CHANGELOG.md`](CHANGELOG.md) file.
+3. Update the version in the [`progressbutton/build.gradle.kts`](progressbutton/build.gradle.kts)
+   file.
+4. Commit and push.
+    * `git commit -m "Prepare next relaese" .`
+    * `git push origin main`
+5. Create a git tag with the version of the [`CHANGELOG.md`](CHANGELOG.md) and push.
+    * `git tag -a [X.Y.Z] -m "Next version"`
+    * `git push origin [X.Y.Z]`
