@@ -41,7 +41,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.ioki-mobility"
             artifactId = "progressbutton"
-            version = "1.2"
+            version = "1.2.1"
 
             afterEvaluate {
                 from(components["release"])

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1
+
+* Add JitPack config file
+
+Full diff: [`1.2...1.2.1`](https://github.com/ioki-mobility/ProgressButton/compare/1.2...1.2.1)
+
 ## 1.2
 
 **Maintenance release**:
