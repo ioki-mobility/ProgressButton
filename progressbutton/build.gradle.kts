@@ -43,6 +43,25 @@ publishing {
             artifactId = "progressbutton"
             version = "1.2.1"
 
+            pom {
+                url.set("https://github.com/ioki-mobility/ProgressButton")
+                licenses {
+                    license {
+                        name.set("MIT License")
+                        url.set("https://github.com/ioki-mobility/ProgressButton/blob/main/LICENSE")
+                    }
+                }
+                organization {
+                    name.set("ioki")
+                    url.set("https://ioki.com")
+                }
+                scm {
+                    url.set("https://github.com/ioki-mobility/ProgressButton")
+                    connection.set("https://github.com/ioki-mobility/ProgressButton.git")
+                    developerConnection.set("git@github.com:ioki-mobility/ProgressButton.git")
+                }
+            }
+
             afterEvaluate {
                 from(components["release"])
             }
