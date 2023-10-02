@@ -14,4 +14,4 @@ sample-composeActivity = "androidx.activity:activity-compose:1.7.2"
 androidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 androidLibrary = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin = "org.jetbrains.kotlin.android:1.9.10"
-wrapperUpgrade = "org.gradle.wrapper-upgrade:0.11.3"
+wrapperUpgrade = "org.gradle.wrapper-upgrade:0.11.4"
