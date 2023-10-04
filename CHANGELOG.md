@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.0
+
+* Add license to POM file
+* Upgrade Gradle Wrapper Plugin
+* Upgrade Android Gradle Plugin (8.1.2)
+
+Full diff: [`1.2...1.2.1`](https://github.com/ioki-mobility/ProgressButton/compare/1.2.1...1.3.0)
+
 ## 1.2.1
 
 * Add JitPack config file
