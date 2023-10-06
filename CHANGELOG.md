@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.1
+
+* Use SDPX license identifier for license in the POM file
+* Upgrade Gradle Wrapper (8.4)
+
+Full diff: [`1.3.0...1.3.1`](https://github.com/ioki-mobility/ProgressButton/compare/1.3.0...1.3.1)
+
 ## 1.3.0
 
 * Add license to POM file
