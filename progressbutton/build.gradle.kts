@@ -47,7 +47,7 @@ publishing {
                 url.set("https://github.com/ioki-mobility/ProgressButton")
                 licenses {
                     license {
-                        name.set("MIT License")
+                        name.set("MIT")
                         url.set("https://github.com/ioki-mobility/ProgressButton/blob/main/LICENSE")
                     }
                 }
