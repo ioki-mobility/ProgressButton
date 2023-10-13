@@ -8,13 +8,13 @@ kotlin {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 34
     namespace = "com.ioki.progressbutton.sample"
 
     defaultConfig {
         applicationId = "com.ioki.progressbutton.sample"
         minSdk = 21
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
     }
