@@ -2,7 +2,7 @@
 androidGradlePlugin = "8.1.2"
 
 [libraries]
-compose-ui = "androidx.compose.ui:ui:1.4.3"
+compose-ui = "androidx.compose.ui:ui:1.5.3"
 compose-foundation = "androidx.compose.foundation:foundation:1.5.3"
 compose-material = "androidx.compose.material:material:1.4.3"
 tools-compose-compiler = "androidx.compose.compiler:compiler:1.5.3"
