@@ -48,7 +48,7 @@ publishing {
                 licenses {
                     license {
                         name.set("MIT")
-                        url.set("https://github.com/ioki-mobility/ProgressButton/blob/main/LICENSE")
+                        url.set("https://opensource.org/licenses/MIT")
                     }
                 }
                 organization {
