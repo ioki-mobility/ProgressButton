@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.2
+
+* Use SDPX license URL for license in the POM file
+* Update target and compile sdk to 34
+* Bump compose dependencies to 1.5.3/1.8.0/1.10.0
+
+Full diff: [`1.3.1...1.3.2`](https://github.com/ioki-mobility/ProgressButton/compare/1.3.1...1.3.2)
+
 ## 1.3.1
 
 * Use SDPX license identifier for license in the POM file

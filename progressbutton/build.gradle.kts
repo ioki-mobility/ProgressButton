@@ -41,7 +41,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.github.ioki-mobility"
             artifactId = "progressbutton"
-            version = "1.3.1"
+            version = "1.3.2"
 
             pom {
                 url.set("https://github.com/ioki-mobility/ProgressButton")
