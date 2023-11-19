@@ -8,7 +8,7 @@ compose-material = "androidx.compose.material:material:1.5.4"
 tools-compose-compiler = "androidx.compose.compiler:compiler:1.5.4"
 
 sample-material = "com.google.android.material:material:1.10.0"
-sample-composeActivity = "androidx.activity:activity-compose:1.8.0"
+sample-composeActivity = "androidx.activity:activity-compose:1.8.1"
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }
