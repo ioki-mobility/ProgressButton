@@ -39,9 +39,9 @@ android {
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.github.ioki-mobility"
+            groupId = "com.ioki.progressbutton"
             artifactId = "progressbutton"
-            version = "1.3.2"
+            version = "1.4.0-SNAPSHOT"
 
             pom {
                 name.set("ProgressButton")
