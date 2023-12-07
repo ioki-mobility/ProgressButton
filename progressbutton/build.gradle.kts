@@ -44,6 +44,8 @@ publishing {
             version = "1.3.2"
 
             pom {
+                name.set("ProgressButton")
+                description.set("An Button that uses a progress state as background")
                 url.set("https://github.com/ioki-mobility/ProgressButton")
                 licenses {
                     license {
@@ -55,10 +57,19 @@ publishing {
                     name.set("ioki")
                     url.set("https://ioki.com")
                 }
+                developers {
+                    developer {
+                        name.set("Stefan 'StefMa' M.")
+                        email.set("StefMaDev@outlook.com")
+                        url.set("https://StefMa.guru")
+                        organization.set("ioki")
+                        organizationUrl.set("https://ioki.com")
+                    }
+                }
                 scm {
                     url.set("https://github.com/ioki-mobility/ProgressButton")
-                    connection.set("https://github.com/ioki-mobility/ProgressButton.git")
-                    developerConnection.set("git@github.com:ioki-mobility/ProgressButton.git")
+                    connection.set("scm:git:git://github.com/ioki-mobility/ProgressButton.git")
+                    developerConnection.set("scm:git:ssh://git@github.com:ioki-mobility/ProgressButton.git")
                 }
             }
 
