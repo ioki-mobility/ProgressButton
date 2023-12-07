@@ -48,7 +48,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.ioki.progressbutton"
             artifactId = "progressbutton"
-            version = "1.4.0-SNAPSHOT"
+            version = "2.0.0-SNAPSHOT"
 
             pom {
                 name.set("ProgressButton")
