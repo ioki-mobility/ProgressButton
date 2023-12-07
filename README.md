@@ -82,23 +82,15 @@ fun ProgressButton(
 
 ## Download
 
-ProgressButton is hosted on JitPack.
+ProgressButton is hosted on Maven Central.
 Here's how you include it in your gradle project:
 
-**Step 1.** Add the JitPack repository to your build file:
+**Step 1.** Add the Maven Central repository to your build file:
 
 ```groovy
-allprojects {
-    repositories {
-        // Other repositories
-        maven {
-            url 'https://jitpack.io'
-            // For a of bit extra safety
-            content {
-                includeGroup("com.github.ioki-mobility")
-            }
-        }
-    }
+repositories {
+    // Other repositories
+    mavenCentral()
 }
 ```
 
@@ -106,7 +98,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.github.ioki-mobility:ProgressButton:<latest-version>'
+    implementation 'com.ioki.progressbutton:progressbutton:<latest-version>'
 }
 ```
 
@@ -116,9 +108,11 @@ dependencies {
 2. Add the changes to the top of the [`CHANGELOG.md`](CHANGELOG.md) file.
 3. Update the version in the [`progressbutton/build.gradle.kts`](progressbutton/build.gradle.kts)
    file.
-4. Commit and push.
+4. Commit.
     * `git commit -m "Prepare next relaese" .`
-    * `git push origin main`
 5. Create a git tag with the version of the [`CHANGELOG.md`](CHANGELOG.md) and push.
-    * `git tag -a [X.Y.Z] -m "Next version"`
+    * `git tag [X.Y.Z]`
     * `git push origin [X.Y.Z]`
+6. Update the version [`progressbutton/build.gradle.kts`](progressbutton/build.gradle.kts) to the **next patch version** +`-SNAPSHOT`
+7. Commit and push the changes
+   * `git push origin main .`
