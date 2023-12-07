@@ -1,0 +1,28 @@
+name: 'Publish Maven Central Staging'
+
+on:
+  push:
+    tags:
+      - '*'
+
+env:
+  GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
+  GPG_SIGNING_PASSWORD: ${{ secrets.GPG_SIGNING_PASSWORD }}
+  SONATYPE_USER: ${{ secrets.SONATYPE_USER }}
+  SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
+
+jobs:
+  publish:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'adopt'
+          java-version: '17'
+
+      - name: Publish to Sonatype Staging
+        run: ./gradlew publishAllPublicationsToSonatypeStagingRepository
