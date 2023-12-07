@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlin)
     `maven-publish`
+    signing
 }
 
 kotlin {
@@ -34,6 +35,12 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions { jvmTarget = "1.8" }
+}
+
+dependencies {
+    api(libs.compose.ui)
+    implementation(libs.compose.foundation)
+    implementation(libs.compose.material)
 }
 
 publishing {
@@ -97,8 +104,9 @@ publishing {
     }
 }
 
-dependencies {
-    api(libs.compose.ui)
-    implementation(libs.compose.foundation)
-    implementation(libs.compose.material)
+signing {
+    val signingKey = System.getenv("GPG_SIGNING_KEY")
+    val signingPassword = System.getenv("GPG_SIGNING_PASSWORD")
+    useInMemoryPgpKeys(signingKey, signingPassword)
+    sign(publishing.publications)
 }
