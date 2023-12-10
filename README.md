@@ -1,8 +1,9 @@
 # ProgressButton
 
 [![Build](https://github.com/ioki-mobility/ProgressButton/actions/workflows/build.yml/badge.svg)](https://github.com/ioki-mobility/ProgressButton/actions/workflows/build.yml)
-[![Jitpack](https://jitpack.io/v/ioki-mobility/ProgressButton.svg)](https://jitpack.io/#ioki-mobility/ProgressButton)
-[![MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ioki-mobility/ProgressButton/blob/main/LICENSE)
+[![Maven Central](https://img.shields.io/maven-central/v/com.ioki.progressbutton/progressbutton?labelColor=%2324292E&color=%233246c8)](https://central.sonatype.com/namespace/com.ioki.progressbutton)
+[![Snapshot](https://img.shields.io/nexus/s/com.ioki.progressbutton/progressbutton?labelColor=%2324292E&color=%234f78ff&server=https://s01.oss.sonatype.org)](https://s01.oss.sonatype.org/content/repositories/snapshots/com/ioki/progressbutton/)
+[![MIT](https://img.shields.io/badge/license-MIT-blue.svg?labelColor=%2324292E&color=%23d11064)](https://github.com/ioki-mobility/ProgressButton/blob/main/LICENSE.md)
 
 ## What?
 
@@ -94,6 +95,18 @@ repositories {
 }
 ```
 
+<details>
+<summary>Snapshot versions can be download over the sonatype snapshot repository:</summary>
+    
+```kotlin
+repositories {
+    // Other repositories
+    maven(url = "https://s01.oss.sonatype.org/content/repositories/snapshots")
+}
+```
+
+</details>
+
 **Step 2.** Add the dependency:
 
 ```groovy
@@ -103,6 +116,16 @@ dependencies {
 ```
 
 ## Releasing
+
+### Continuous release
+
+By default, each merge to the `main` branch will create a new SNAPSHOT release. 
+If you want to use the latest and greatest use the SNAPSHOT version of the library.
+But please be aware that they might contain bugs or behaviour changes.
+
+To use the SNAPSHOT version you have to include the sonatype snapshot repository which in the *Download* section above.
+
+### Proper release
 
 1. Checkout `main` branch and pull latest changes.
 2. Add the changes to the top of the [`CHANGELOG.md`](CHANGELOG.md) file.
