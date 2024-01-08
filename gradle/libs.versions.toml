@@ -1,5 +1,5 @@
 [versions]
-androidGradlePlugin = "8.2.0"
+androidGradlePlugin = "8.2.1"
 
 [libraries]
 compose-ui = "androidx.compose.ui:ui:1.5.4"
