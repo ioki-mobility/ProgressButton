@@ -1,10 +1,11 @@
 [versions]
 androidGradlePlugin = "8.2.2"
+compose = "1.5.4"
 
 [libraries]
-compose-ui = "androidx.compose.ui:ui:1.5.4"
-compose-foundation = "androidx.compose.foundation:foundation:1.5.4"
-compose-material = "androidx.compose.material:material:1.5.4"
+compose-ui = { module = "androidx.compose.ui:ui" version.ref = "compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation" version.ref = "compose" }
+compose-material = { module =  "androidx.compose.material:material" version.ref = "compose" }
 tools-compose-compiler = "androidx.compose.compiler:compiler:1.5.8"
 
 sample-material = "com.google.android.material:material:1.11.0"
