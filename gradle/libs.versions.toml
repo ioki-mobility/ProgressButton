@@ -14,4 +14,4 @@ sample-composeActivity = "androidx.activity:activity-compose:1.8.2"
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 androidLibrary = { id = "com.android.library", version.ref = "androidGradlePlugin" }
-kotlin = "org.jetbrains.kotlin.android:1.9.22"
+kotlin = "org.jetbrains.kotlin.android:1.9.23"
