@@ -6,7 +6,7 @@ compose = "1.6.7"
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material = { module =  "androidx.compose.material:material", version.ref = "compose" }
-tools-compose-compiler = "androidx.compose.compiler:compiler:1.5.12"
+tools-compose-compiler = "androidx.compose.compiler:compiler:1.5.14"
 
 sample-material = "com.google.android.material:material:1.12.0"
 sample-composeActivity = "androidx.activity:activity-compose:1.9.0"
@@ -14,4 +14,4 @@ sample-composeActivity = "androidx.activity:activity-compose:1.9.0"
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 androidLibrary = { id = "com.android.library", version.ref = "androidGradlePlugin" }
-kotlin = "org.jetbrains.kotlin.android:1.9.23"
+kotlin = "org.jetbrains.kotlin.android:1.9.24"
