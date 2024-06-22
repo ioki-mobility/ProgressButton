@@ -1,5 +1,5 @@
 [versions]
-androidGradlePlugin = "8.4.1"
+androidGradlePlugin = "8.5.0"
 compose = "1.6.7"
 
 [libraries]
