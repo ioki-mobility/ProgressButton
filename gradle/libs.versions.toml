@@ -1,6 +1,6 @@
 [versions]
 androidGradlePlugin = "8.5.0"
-compose = "1.6.7"
+compose = "1.6.8"
 
 [libraries]
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
