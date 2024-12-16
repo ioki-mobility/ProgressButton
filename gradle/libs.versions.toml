@@ -1,6 +1,6 @@
 [versions]
 androidGradlePlugin = "8.7.3"
-compose = "1.7.5"
+compose = "1.7.6"
 kotlinVersion = "2.1.0"
 
 [libraries]
