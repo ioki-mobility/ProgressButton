@@ -11,12 +11,12 @@ kotlin {
 }
 
 android {
-    compileSdk = 34
+    compileSdk = 35
     namespace = "com.ioki.progressbutton"
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 35
     }
 
     buildFeatures {
