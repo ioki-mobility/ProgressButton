@@ -1,8 +1,9 @@
 # ProgressButton
 
 [![Build](https://github.com/ioki-mobility/ProgressButton/actions/workflows/build.yml/badge.svg)](https://github.com/ioki-mobility/ProgressButton/actions/workflows/build.yml)
-[![Maven Central](https://img.shields.io/maven-central/v/com.ioki.progressbutton/progressbutton?labelColor=%2324292E&color=%233246c8)](https://central.sonatype.com/namespace/com.ioki.progressbutton)
+[![Maven Central](https://img.shields.io/maven-central/v/com.ioki.progressbutton/progressbutton?labelColor=%2324292E&color=%233246c8)](https://central.sonatype.com/namespace/com.ioki.progressbutton) <!-- Disabled because of: https://github.com/badges/shields/pull/10997
 [![Snapshot](https://img.shields.io/nexus/s/com.ioki.progressbutton/progressbutton?labelColor=%2324292E&color=%234f78ff&server=https://s01.oss.sonatype.org)](https://s01.oss.sonatype.org/content/repositories/snapshots/com/ioki/progressbutton/)
+-->
 [![javadoc](https://javadoc.io/badge2/com.ioki.progressbutton/progressbutton/javadoc.svg?labelColor=%2324292E&color=%236eaaff)](https://javadoc.io/doc/com.ioki.progressbutton/progressbutton) 
 [![MIT](https://img.shields.io/badge/license-MIT-blue.svg?labelColor=%2324292E&color=%23d11064)](https://github.com/ioki-mobility/ProgressButton/blob/main/LICENSE.md)
 
@@ -102,7 +103,7 @@ repositories {
 ```kotlin
 repositories {
     // Other repositories
-    maven(url = "https://s01.oss.sonatype.org/content/repositories/snapshots")
+    maven(url = "https://central.sonatype.com/repository/maven-snapshots")
 }
 ```
 
