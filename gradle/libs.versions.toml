@@ -1,7 +1,7 @@
 [versions]
 androidGradlePlugin = "8.10.1"
 compose = "1.8.2"
-kotlinVersion = "2.1.21"
+kotlinVersion = "2.2.0"
 
 [libraries]
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
