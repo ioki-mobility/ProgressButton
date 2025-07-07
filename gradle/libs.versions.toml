@@ -16,4 +16,4 @@ androidApplication = { id = "com.android.application", version.ref = "androidGra
 androidLibrary = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
 compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinVersion" }
-nmcp = "com.gradleup.nmcp:0.1.5"
+nmcp = "com.gradleup.nmcp:1.0.1"
