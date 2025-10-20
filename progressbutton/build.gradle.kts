@@ -45,7 +45,7 @@ dependencies {
 }
 
 group = "com.ioki.progressbutton"
-version = "2.1.0"
+version = "2.2.0-SNAPSHOT"
 publishing {
     publications {
         register<MavenPublication>("release") {
