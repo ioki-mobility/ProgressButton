@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlin)
@@ -9,15 +11,15 @@ plugins {
 
 kotlin {
     jvmToolchain(17)
+    compilerOptions.jvmTarget = JvmTarget.JVM_1_8
 }
 
 android {
-    compileSdk = 35
+    compileSdk = 36
     namespace = "com.ioki.progressbutton"
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 35
     }
 
     buildFeatures {
@@ -35,7 +37,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    kotlinOptions { jvmTarget = "1.8" }
 }
 
 dependencies {
@@ -67,11 +68,10 @@ publishing {
                 }
                 developers {
                     developer {
-                        name.set("Stefan 'StefMa' M.")
-                        email.set("StefMaDev@outlook.com")
-                        url.set("https://StefMa.guru")
+                        id.set("ioki")
+                        name.set("ioki Android Team")
                         organization.set("ioki")
-                        organizationUrl.set("https://ioki.com")
+                        organizationUrl.set("https://www.ioki.com")
                     }
                 }
                 scm {
