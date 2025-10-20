@@ -15,7 +15,7 @@ kotlin {
 }
 
 android {
-    compileSdk = 35
+    compileSdk = 36
     namespace = "com.ioki.progressbutton"
 
     defaultConfig {
