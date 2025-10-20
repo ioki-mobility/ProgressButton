@@ -68,11 +68,10 @@ publishing {
                 }
                 developers {
                     developer {
-                        name.set("Stefan 'StefMa' M.")
-                        email.set("StefMaDev@outlook.com")
-                        url.set("https://StefMa.guru")
+                        id.set("ioki")
+                        name.set("ioki Android Team")
                         organization.set("ioki")
-                        organizationUrl.set("https://ioki.com")
+                        organizationUrl.set("https://www.ioki.com")
                     }
                 }
                 scm {
