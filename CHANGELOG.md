@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.0
+
+Maintenance release:
+Just a bump of dependencies and tools.
+
+Full diff: [`2.0.0...2.1.0`](https://github.com/ioki-mobility/ProgressButton/compare/2.0.0...2.1.0)
+
 ## 2.0.0
 
 **New maven coordinates**
