@@ -1,5 +1,5 @@
 [versions]
-androidGradlePlugin = "8.13.0"
+androidGradlePlugin = "9.2.1"
 compose = "1.9.3"
 kotlinVersion = "2.2.20"
 
@@ -14,6 +14,5 @@ sample-composeActivity = "androidx.activity:activity-compose:1.10.1"
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 androidLibrary = { id = "com.android.library", version.ref = "androidGradlePlugin" }
-kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
 compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinVersion" }
 nmcp = "com.gradleup.nmcp:1.2.0"
