@@ -8,12 +8,6 @@ updates:
       directory: "/"
       schedule:
         interval: "weekly"
-      groups:
-        kotlin-compose:
-          patterns:
-            - "org.jetbrains.kotlin.android*"
-            - "androidx.compose.compiler*"
-
     - package-ecosystem: "github-actions"
       directory: "/"
       schedule:
